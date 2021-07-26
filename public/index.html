@@ -19,6 +19,7 @@
 <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
 <script>
   const domain = "https://vo-van.herokuapp.com/";
+  //const domain = "http://localhost:3000/";
   var today = new Date();
   var date = today.getDate() + "-" + (today.getMonth() + 1) + "-" + today.getFullYear();
   var dateTime = date;
@@ -52,7 +53,7 @@
         ],
       });
     });
-    console.log(dataResult)
+    console.log(dataResult);
     return dataResult;
   }
   a();
@@ -75,7 +76,6 @@
         ],
       });
     });
-    console.log(dataResult);
     return dataResult;
   }
   total();
