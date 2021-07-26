@@ -38,6 +38,7 @@
         dataResult[i].hien,
       ];
       dataSet.push(arrItem);
+      console.log(arrItem);
     }
     $(document).ready(function () {
       $("#example").DataTable({
@@ -51,6 +52,7 @@
         ],
       });
     });
+    console.log(dataResult)
     return dataResult;
   }
   a();
@@ -99,6 +101,7 @@
     }).catch((error) => {
       console.error("Error:", error);
     });
+    location.reload();
   }
 </script>
 <body>
