@@ -19,7 +19,7 @@
 <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
 <script>
   const domain = "https://vo-van.herokuapp.com/";
-  // const domain = "http://localhost:3000/";
+  //const domain = "http://localhost:3000/";
   var today = new Date();
   var date = today.getDate() + "-" + (today.getMonth() + 1) + "-" + today.getFullYear();
   var dateTime = date;
@@ -112,19 +112,19 @@
         <form>
           <div class="form-group">
             <label>Minh</label>
-            <input type="text" class="form-control" id="input-minh" />
+            <input type="number" class="form-control" id="input-minh" />
           </div>
           <div class="form-group">
             <label>Phương</label>
-            <input type="text" class="form-control" id="input-phuong" />
+            <input type="number" class="form-control" id="input-phuong" />
           </div>
           <div class="form-group">
             <label>Nhung</label>
-            <input type="text" class="form-control" id="input-nhung" />
+            <input type="number" class="form-control" id="input-nhung" />
           </div>
           <div class="form-group">
             <label>Hiền</label>
-            <input type="text" class="form-control" id="input-hien" />
+            <input type="number" class="form-control" id="input-hien" />
           </div>
         </form>
         <button class="btn btn-primary" onclick="add()">add</button>
