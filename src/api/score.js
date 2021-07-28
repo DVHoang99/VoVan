@@ -1,16 +1,16 @@
 module.exports.getAll = async function getAll(req, res) {
   const a = req.params.param;
   const database = req.app.get("database");
-  const row = await database("infomation")
-    .where("day", "=", a)
-    .select("*")
-    .catch(() => []);
-  const result = [];
+  // const row = await database("infomation")
+  //   .where("day", "=", a)
+  //   .select("*")
+  //   .catch(() => []);
+  // const result = [];
 
-  for (let i = 0; i < row.length; i++) {
-    const result2 = [row[i].day, row[i].minh, row[i].phuong, row[i].nhung, row[i].hien];
-    result.push(result2);
-  }
+  // for (let i = 0; i < row.length; i++) {
+  //   const result2 = [row[i].day, row[i].minh, row[i].phuong, row[i].nhung, row[i].hien];
+  //   result.push(result2);
+  // }
 
   return res.json(row);
 };
