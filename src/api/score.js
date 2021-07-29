@@ -18,16 +18,27 @@ module.exports.postItem = async function postItem(req, res, next) {
   // Retrieve database connection, database database <-> knex
   const database = req.app.get("database");
   try {
-    const result = await database("infomation").returning("*").insert({
-      day: req.body.day,
-      minh: req.body.minh,
-      phuong: req.body.phuong,
-      nhung: req.body.nhung,
-      hien: req.body.hien,
-    });
-    return res.status(200).json({
-      response: "ok",
-    });
+    const check =
+      Number(req.body.minh) +
+      Number(req.body.phuong) +
+      Number(req.body.nhung) +
+      Number(req.body.hien);
+    if (check == 0) {
+      const result = await database("infomation").returning("*").insert({
+        day: req.body.day,
+        minh: req.body.minh,
+        phuong: req.body.phuong,
+        nhung: req.body.nhung,
+        hien: req.body.hien,
+      });
+      return res.status(200).json({
+        response: "ok",
+      });
+    } else {
+      return res.status(200).json({
+        response: "false",
+      });
+    }
   } catch (err) {
     next(err);
   }
